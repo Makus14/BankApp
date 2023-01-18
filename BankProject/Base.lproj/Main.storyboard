@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XKJ-f8-ZgJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BankProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="GMSMapView" translatesAutoresizingMaskIntoConstraints="NO" id="NOB-Dw-8yB" customClass="GMSMapView">
+                                <rect key="frame" x="1000" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rGl-tL-xy2">
+                                <rect key="frame" x="10" y="709" width="373" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.73886312160000001" blue="0.47956915420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cCq-hi-EBN"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nj9-qU-nGa">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4BQ-Se-kaS">
+                                <rect key="frame" x="10" y="649" width="373" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.73886312160000001" blue="0.47956915420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kCb-Fg-c75"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nax-tI-DN6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.74066339410000004" blue="0.91520808939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4BQ-Se-kaS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="23E-D3-ubr"/>
+                            <constraint firstItem="rGl-tL-xy2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3KI-tZ-92r"/>
+                            <constraint firstItem="NOB-Dw-8yB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4f2-Pb-QKK"/>
+                            <constraint firstItem="rGl-tL-xy2" firstAttribute="top" secondItem="4BQ-Se-kaS" secondAttribute="bottom" constant="10" id="CqU-em-Pjs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NOB-Dw-8yB" secondAttribute="bottom" id="IHw-eh-mZC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NOB-Dw-8yB" secondAttribute="trailing" id="JnW-n3-pgh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rGl-tL-xy2" secondAttribute="bottom" constant="10" id="MoY-E9-fmk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4BQ-Se-kaS" secondAttribute="trailing" constant="10" id="f3q-Af-cd2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rGl-tL-xy2" secondAttribute="trailing" constant="10" id="n0u-5K-IN6"/>
+                            <constraint firstItem="NOB-Dw-8yB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vBp-xZ-zIY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WtT-tG-2E1"/>
+                    <connections>
+                        <outlet property="collectionBOA" destination="rGl-tL-xy2" id="8yp-ft-hKm"/>
+                        <outlet property="collectionCity" destination="4BQ-Se-kaS" id="tRX-le-QpG"/>
+                        <outlet property="googleMapsView" destination="NOB-Dw-8yB" id="VPn-DO-dW5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1467.9389312977098" y="-404.22535211267609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vaC-Ga-5fF">
+            <objects>
+                <viewController id="AhY-s8-U6w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DI0-ob-Tyj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lGA-gO-q5x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VVS-EZ-Zuz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBf-dA-egZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1469" y="285"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GIg-c3-izL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XKJ-f8-ZgJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WeM-mU-bxR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3l0-tj-Rxc" kind="relationship" relationship="viewControllers" id="yRJ-Im-5YB"/>
+                        <segue destination="yv6-1N-rfO" kind="relationship" relationship="viewControllers" id="9LP-1g-6aY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uza-Y4-sbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="120"/>
+        </scene>
+        <!--Карта-->
+        <scene sceneID="YZW-Cn-r0n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3l0-tj-Rxc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Карта" image="map.fill" catalog="system" id="wed-Cp-2yU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DNt-pX-9dU">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ydf-LL-7Ki"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eci-yo-rBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427" y="-404"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="DOY-Zh-w9o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yv6-1N-rfO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Профиль" image="figure.jumprope" catalog="system" id="DTC-60-XVZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kbK-dc-4Fp">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AhY-s8-U6w" kind="relationship" relationship="rootViewController" id="Rsi-82-bcM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZf-3r-m4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427" y="285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="figure.jumprope" catalog="system" width="79" height="128"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
