@@ -112,6 +112,16 @@
 			path = GemController;
 			sourceTree = "<group>";
 		};
+		BD723980297D90C200AA52C7 /* ModelBank */ = {
+			isa = PBXGroup;
+			children = (
+				BD90B5DE297702D100DC6DCC /* BankAPI.swift */,
+				BD90B5E0297702DC00DC6DCC /* BankModel.swift */,
+				BD90B5E2297702EA00DC6DCC /* BankProvider.swift */,
+			);
+			path = ModelBank;
+			sourceTree = "<group>";
+		};
 		BD8B72A3297717AA00910781 /* BOA */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		BD90B5A92977002A00DC6DCC /* BankProject */ = {
 			isa = PBXGroup;
 			children = (
+				BD723980297D90C200AA52C7 /* ModelBank */,
 				BD7239722979BCD100AA52C7 /* ModelMetal */,
 				BDEA115D2979A54B00C61C8E /* ModelGem */,
 				BDEA115A2979A33900C61C8E /* Controllers */,
@@ -163,9 +174,6 @@
 				BD90B5B32977002D00DC6DCC /* Assets.xcassets */,
 				BD90B5B52977002D00DC6DCC /* LaunchScreen.storyboard */,
 				BD90B5B82977002D00DC6DCC /* Info.plist */,
-				BD90B5DE297702D100DC6DCC /* BankAPI.swift */,
-				BD90B5E0297702DC00DC6DCC /* BankModel.swift */,
-				BD90B5E2297702EA00DC6DCC /* BankProvider.swift */,
 			);
 			path = BankProject;
 			sourceTree = "<group>";

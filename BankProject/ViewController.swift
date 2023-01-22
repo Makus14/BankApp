@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var collectionCity: UICollectionView!
     
     let massBank: [String] = ["Банкоматы", "Отделения", "Всё"]
-    let massNames = [String]()
+    var massNames = [String]()
     
     private var allMarkers = [GMSMarker]()
     private var dollarMarkers = [GMSMarker]()
@@ -42,8 +42,14 @@ final class ViewController: UIViewController {
         BelarusbankProvider().getCurrency { [weak self] allBank in
             guard let self else { return }
             for bank in allBank {
-                self.drawMarkers(bank: bank)
+                if !self.massNames.contains(bank.city) {
+                    self.massNames.append(bank.city)
+                }
+                //print("ГОРОД: \(self.massNames)!!!!!!")
+                //self.drawMarkers(bank: bank)
+                
             }
+            //print("ГОРОД: \(self.massNames)!!!!!!")
         } failure: { error in
             print(error)
         }
@@ -120,8 +126,10 @@ extension ViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionBOA {
             return massBank.count
+        } else {
+            print("\(massNames.count)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            return massNames.count
         }
-        return massNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -132,6 +140,9 @@ extension ViewController : UICollectionViewDataSource {
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCityCell.id, for: indexPath)
+            guard let nameCell = cell as? CollectionViewCityCell else { return cell }
+            nameCell.setName(massNames: massNames[indexPath.row])
+            collectionView.reloadData()
                 
             return cell
         }

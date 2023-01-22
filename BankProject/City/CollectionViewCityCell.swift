@@ -9,11 +9,25 @@ import UIKit
 
 class CollectionViewCityCell: UICollectionViewCell {
 
-    static let id = String(describing: CollectionViewBankCell.self)
+    static let id = String(describing: CollectionViewCityCell.self)
+    
+    @IBOutlet weak var buttonOutlet: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
+    
+    func setName(massNames: String) {
+        
+        buttonOutlet.setTitle(massNames, for: .normal)
+        
+    }
+    
+    @IBAction func buttonDidTap(_ sender: Any) {
+        
+        
+    }
+    
 
 }
