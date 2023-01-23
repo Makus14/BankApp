@@ -20,7 +20,11 @@ final class ViewController: UIViewController {
     @IBOutlet weak var collectionCity: UICollectionView!
     
     let massBank: [String] = ["Банкоматы", "Отделения", "Всё"]
-    var massNames = [String]()
+    var massNames = [String]() {
+        didSet {
+            collectionCity.reloadData()
+        }
+    }
     
     private var allMarkers = [GMSMarker]()
     private var dollarMarkers = [GMSMarker]()
@@ -45,11 +49,11 @@ final class ViewController: UIViewController {
                 if !self.massNames.contains(bank.city) {
                     self.massNames.append(bank.city)
                 }
-                //print("ГОРОД: \(self.massNames)!!!!!!")
+                
                 //self.drawMarkers(bank: bank)
                 
             }
-            //print("ГОРОД: \(self.massNames)!!!!!!")
+            
         } failure: { error in
             print(error)
         }
@@ -127,7 +131,6 @@ extension ViewController : UICollectionViewDataSource {
         if collectionView == collectionBOA {
             return massBank.count
         } else {
-            print("\(massNames.count)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
             return massNames.count
         }
     }
@@ -142,7 +145,6 @@ extension ViewController : UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCityCell.id, for: indexPath)
             guard let nameCell = cell as? CollectionViewCityCell else { return cell }
             nameCell.setName(massNames: massNames[indexPath.row])
-            collectionView.reloadData()
                 
             return cell
         }
