@@ -11,20 +11,16 @@ class CollectionViewBankCell: UICollectionViewCell {
 
     static let id = String(describing: CollectionViewBankCell.self)
     
-    @IBOutlet weak var buttonOutlet: UIButton!
+    @IBOutlet weak var labelNameOfUnit: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+       
     }
     
     func setName(massBank: String) {
         
-        buttonOutlet.setTitle(massBank, for: .normal)
-        
-    }
-    
-    @IBAction func buttonDidTap(_ sender: Any) {
+        labelNameOfUnit.text = massBank
         
     }
     
