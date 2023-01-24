@@ -16,6 +16,8 @@ class MetalCell: UITableViewCell {
     @IBOutlet weak var nameOutlet: UILabel!
     @IBOutlet weak var filials_textOutlet: UILabel!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
