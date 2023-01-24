@@ -29,6 +29,10 @@
 		BDEA11612979A58600C61C8E /* GemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA11602979A58600C61C8E /* GemModel.swift */; };
 		BDEA11632979A59200C61C8E /* GemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA11622979A59200C61C8E /* GemProvider.swift */; };
 		BDEA11652979AC7900C61C8E /* GemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA11642979AC7900C61C8E /* GemCell.swift */; };
+		BDFF9FCA29803C8300B3365A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF9FC929803C8300B3365A /* NewsModel.swift */; };
+		BDFF9FCC29803C9100B3365A /* NewsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF9FCB29803C9100B3365A /* NewsProvider.swift */; };
+		BDFF9FCE298040BC00B3365A /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF9FCD298040BC00B3365A /* NewsController.swift */; };
+		BDFF9FD1298040ED00B3365A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFF9FD0298040ED00B3365A /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		BDEA11602979A58600C61C8E /* GemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemModel.swift; sourceTree = "<group>"; };
 		BDEA11622979A59200C61C8E /* GemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemProvider.swift; sourceTree = "<group>"; };
 		BDEA11642979AC7900C61C8E /* GemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemCell.swift; sourceTree = "<group>"; };
+		BDFF9FC929803C8300B3365A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		BDFF9FCB29803C9100B3365A /* NewsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsProvider.swift; sourceTree = "<group>"; };
+		BDFF9FCD298040BC00B3365A /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
+		BDFF9FD0298040ED00B3365A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 		BD90B5A92977002A00DC6DCC /* BankProject */ = {
 			isa = PBXGroup;
 			children = (
+				BDFF9FC429803C3100B3365A /* ModelNews */,
 				BD723980297D90C200AA52C7 /* ModelBank */,
 				BD7239722979BCD100AA52C7 /* ModelMetal */,
 				BDEA115D2979A54B00C61C8E /* ModelGem */,
@@ -176,6 +185,7 @@
 		BDEA115A2979A33900C61C8E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BDFF9FCF298040C200B3365A /* NewsController */,
 				BD72397B2979BD4C00AA52C7 /* GemController */,
 				BD72397A2979BD3B00AA52C7 /* MetalController */,
 			);
@@ -189,6 +199,24 @@
 				BDEA11622979A59200C61C8E /* GemProvider.swift */,
 			);
 			path = ModelGem;
+			sourceTree = "<group>";
+		};
+		BDFF9FC429803C3100B3365A /* ModelNews */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF9FC929803C8300B3365A /* NewsModel.swift */,
+				BDFF9FCB29803C9100B3365A /* NewsProvider.swift */,
+			);
+			path = ModelNews;
+			sourceTree = "<group>";
+		};
+		BDFF9FCF298040C200B3365A /* NewsController */ = {
+			isa = PBXGroup;
+			children = (
+				BDFF9FCD298040BC00B3365A /* NewsController.swift */,
+				BDFF9FD0298040ED00B3365A /* NewsCell.swift */,
+			);
+			path = NewsController;
 			sourceTree = "<group>";
 		};
 		EAE95CFA9407C55C3994E669 /* Pods */ = {
@@ -342,13 +370,17 @@
 				BDEA115C2979A39A00C61C8E /* IngotViewController.swift in Sources */,
 				BD90B5E3297702EA00DC6DCC /* BankProvider.swift in Sources */,
 				BD7239762979BCFC00AA52C7 /* MetalModel.swift in Sources */,
+				BDFF9FCC29803C9100B3365A /* NewsProvider.swift in Sources */,
 				BD90B5AB2977002A00DC6DCC /* AppDelegate.swift in Sources */,
 				BD90B5E629770D8600DC6DCC /* CollectionViewBankCell.swift in Sources */,
 				BD72397F2979C33E00AA52C7 /* MetalCell.swift in Sources */,
 				BDEA11652979AC7900C61C8E /* GemCell.swift in Sources */,
 				BD7239782979BD0A00AA52C7 /* MetalProvider.swift in Sources */,
 				BD90B5DF297702D100DC6DCC /* BankAPI.swift in Sources */,
+				BDFF9FD1298040ED00B3365A /* NewsCell.swift in Sources */,
+				BDFF9FCA29803C8300B3365A /* NewsModel.swift in Sources */,
 				BD90B5AD2977002A00DC6DCC /* SceneDelegate.swift in Sources */,
+				BDFF9FCE298040BC00B3365A /* NewsController.swift in Sources */,
 				BD72397D2979C32000AA52C7 /* MetalViewController.swift in Sources */,
 				BD8B72A7297717EE00910781 /* CollectionViewCityCell.swift in Sources */,
 			);
