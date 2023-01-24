@@ -16,18 +16,17 @@ class MetalCell: UITableViewCell {
     @IBOutlet weak var nameOutlet: UILabel!
     @IBOutlet weak var filials_textOutlet: UILabel!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
     }
-
-    func set(metal: MetalModel) {
-        self.metal10Outlet.text = "\(metal.ZOL_10_out)"
-        self.metal20Outlet.text = "\(metal.ZOL_20_out)"
-        self.metal50Outlet.text = "\(metal.ZOL_50_out)"
-        self.nameOutlet.text = "\(metal.name)"
-        self.filials_textOutlet.text = "\(metal.filials_text)"
+    
+    func set(name: String, filials_text: String, _10_out: String, _20_out: String, _50_out: String) {
+        self.metal10Outlet.text = "\(_10_out)"
+        self.metal20Outlet.text = "\(_20_out)"
+        self.metal50Outlet.text = "\(_50_out)"
+        self.nameOutlet.text = "\(name)"
+        self.filials_textOutlet.text = "\(filials_text)"
     }
+    
 }

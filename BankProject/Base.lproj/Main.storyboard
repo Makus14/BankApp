@@ -388,7 +388,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="filials_textOutlet" destination="8Ro-pR-gV2" id="qtA-Kr-7Vi"/>
-                                            <outlet property="metal10Outlet" destination="GNo-ai-jqx" id="D1b-pA-Zfh"/>
+                                            <outlet property="metal10Outlet" destination="GNo-ai-jqx" id="VFh-FG-k9d"/>
                                             <outlet property="metal20Outlet" destination="vXl-FW-B2C" id="pAp-5X-GhG"/>
                                             <outlet property="metal50Outlet" destination="iSL-Id-BjB" id="7DN-L1-lxh"/>
                                             <outlet property="nameOutlet" destination="lcb-OJ-dVI" id="BIC-ca-yRi"/>
@@ -399,10 +399,13 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PJl-ly-58q">
                                 <rect key="frame" x="10" y="103" width="373" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
+                                    <segment title="Gold"/>
+                                    <segment title="Platinum"/>
+                                    <segment title="Silver"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentControllerDidTap:" destination="Ubl-jR-TwG" eventType="valueChanged" id="y1V-FO-7SN"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lHf-It-lk5"/>
@@ -419,6 +422,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="z8g-ox-sKY"/>
                     <connections>
+                        <outlet property="segmentController" destination="PJl-ly-58q" id="Wl1-J6-7sD"/>
                         <outlet property="tableView" destination="4g4-QR-rv7" id="w9F-MQ-tia"/>
                     </connections>
                 </viewController>

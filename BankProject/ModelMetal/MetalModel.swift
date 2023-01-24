@@ -38,7 +38,7 @@ class MetalModel: Mappable {
         SIL_50_out      <- map["SIL_50_out"]
         
         PL_10_out       <- map["PL_10_out"]
-        PL_20_out       <- map["PL_20_out "]
+        PL_20_out       <- map["PL_20_out"]
         PL_50_out       <- map["PL_50_out"]
         
         name            <- map["name"]
