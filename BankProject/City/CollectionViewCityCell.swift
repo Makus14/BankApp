@@ -11,7 +11,7 @@ class CollectionViewCityCell: UICollectionViewCell {
 
     static let id = String(describing: CollectionViewCityCell.self)
     
-    @IBOutlet weak var buttonOutlet: UIButton!
+    @IBOutlet weak var labelCityName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,14 +20,8 @@ class CollectionViewCityCell: UICollectionViewCell {
     
     func setName(massNames: String) {
         
-        buttonOutlet.setTitle(massNames, for: .normal)
+        labelCityName.text = massNames
         
     }
     
-    @IBAction func buttonDidTap(_ sender: Any) {
-        
-        
-    }
-    
-
 }

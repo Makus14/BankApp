@@ -25,6 +25,7 @@ final class ViewController: UIViewController {
             collectionCity.reloadData()
         }
     }
+    var cityBank: String?
     
     private var allMarkers = [GMSMarker]()
     private var dollarMarkers = [GMSMarker]()
@@ -49,8 +50,13 @@ final class ViewController: UIViewController {
                 if !self.massNames.contains(bank.city) {
                     self.massNames.append(bank.city)
                 }
-                
-                //self.drawMarkers(bank: bank)
+                if self.cityBank == nil {
+                    self.drawMarkers(bank: bank)
+                } else {
+                    if bank.city == self.cityBank! {
+                        self.drawMarkers(bank: bank)
+                    }
+                }
                 
             }
             
@@ -62,6 +68,7 @@ final class ViewController: UIViewController {
     private func drawMarkers(bank: Location) {
         guard let bankXcoordinate = Double(bank.gps_x),
               let bankYcoordinate = Double(bank.gps_y) else { return }
+        
         let position = CLLocationCoordinate2D(latitude: bankXcoordinate, longitude: bankYcoordinate)
         let marker = GMSMarker(position: position)
         getAdditionalInfo(marker: marker, title: bank.address, snippet: "\(bank.work_time), в наличии:\(bank.currency)")
@@ -123,7 +130,13 @@ extension GMSMarker {
 }
 
 extension ViewController : UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == collectionCity {
+            cityBank = massNames[indexPath.row]
+            googleMapsView.clear()
+            getBank()
+            }
+        }
 }
 
 extension ViewController : UICollectionViewDataSource {

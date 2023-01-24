@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,22 +19,20 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3H-g7-ovx">
                         <rect key="frame" x="0.0" y="0.0" width="269" height="79"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZd-kX-d84">
-                                <rect key="frame" x="0.0" y="0.0" width="269" height="79"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="End-8N-RgK">
+                                <rect key="frame" x="10" y="10" width="249" height="59"/>
                                 <color key="backgroundColor" red="1" green="0.73886312160000001" blue="0.47956915420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="buttonDidTap:" destination="gTV-IL-0wX" eventType="touchUpInside" id="osd-lL-Lvf"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.73886312160000001" blue="0.47956915420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="RZd-kX-d84" secondAttribute="bottom" id="9DA-jI-KVX"/>
-                            <constraint firstAttribute="trailing" secondItem="RZd-kX-d84" secondAttribute="trailing" id="FNx-z7-nxV"/>
-                            <constraint firstItem="RZd-kX-d84" firstAttribute="leading" secondItem="s3H-g7-ovx" secondAttribute="leading" id="cKo-r3-ydb"/>
-                            <constraint firstItem="RZd-kX-d84" firstAttribute="top" secondItem="s3H-g7-ovx" secondAttribute="top" id="l9s-rs-1iT"/>
+                            <constraint firstAttribute="bottom" secondItem="End-8N-RgK" secondAttribute="bottom" constant="10" id="5C2-5v-RXL"/>
+                            <constraint firstItem="End-8N-RgK" firstAttribute="top" secondItem="s3H-g7-ovx" secondAttribute="top" constant="10" id="sb2-5S-Kp5"/>
+                            <constraint firstItem="End-8N-RgK" firstAttribute="leading" secondItem="s3H-g7-ovx" secondAttribute="leading" constant="10" id="vCi-tS-rOB"/>
+                            <constraint firstAttribute="trailing" secondItem="End-8N-RgK" secondAttribute="trailing" constant="10" id="yKg-B1-PQs"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -49,14 +46,9 @@
             </constraints>
             <size key="customSize" width="269" height="79"/>
             <connections>
-                <outlet property="buttonOutlet" destination="RZd-kX-d84" id="zlW-D8-JoN"/>
+                <outlet property="labelCityName" destination="End-8N-RgK" id="Wfd-Ul-Kvz"/>
             </connections>
             <point key="canvasLocation" x="199.23664122137404" y="29.225352112676056"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
