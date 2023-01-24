@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		42B82A7D636F9FF7C5AC485F /* Pods_BankProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D620EFAEC2F1D1F72D4B685 /* Pods_BankProject.framework */; };
-		BD7239742979BCF200AA52C7 /* MetalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7239732979BCF200AA52C7 /* MetalAPI.swift */; };
 		BD7239762979BCFC00AA52C7 /* MetalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7239752979BCFC00AA52C7 /* MetalModel.swift */; };
 		BD7239782979BD0A00AA52C7 /* MetalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7239772979BD0A00AA52C7 /* MetalProvider.swift */; };
 		BD72397D2979C32000AA52C7 /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72397C2979C32000AA52C7 /* MetalViewController.swift */; };
@@ -27,7 +26,6 @@
 		BD90B5E629770D8600DC6DCC /* CollectionViewBankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90B5E429770D8600DC6DCC /* CollectionViewBankCell.swift */; };
 		BD90B5E729770D8600DC6DCC /* CollectionViewBankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD90B5E529770D8600DC6DCC /* CollectionViewBankCell.xib */; };
 		BDEA115C2979A39A00C61C8E /* IngotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA115B2979A39A00C61C8E /* IngotViewController.swift */; };
-		BDEA115F2979A57900C61C8E /* GemAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA115E2979A57900C61C8E /* GemAPI.swift */; };
 		BDEA11612979A58600C61C8E /* GemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA11602979A58600C61C8E /* GemModel.swift */; };
 		BDEA11632979A59200C61C8E /* GemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA11622979A59200C61C8E /* GemProvider.swift */; };
 		BDEA11652979AC7900C61C8E /* GemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEA11642979AC7900C61C8E /* GemCell.swift */; };
@@ -37,7 +35,6 @@
 		0E1182DEC400430B1C0EA510 /* Pods-BankProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankProject.release.xcconfig"; path = "Target Support Files/Pods-BankProject/Pods-BankProject.release.xcconfig"; sourceTree = "<group>"; };
 		2D620EFAEC2F1D1F72D4B685 /* Pods_BankProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A791EBE8884047DC42887ED1 /* Pods-BankProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankProject.debug.xcconfig"; path = "Target Support Files/Pods-BankProject/Pods-BankProject.debug.xcconfig"; sourceTree = "<group>"; };
-		BD7239732979BCF200AA52C7 /* MetalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalAPI.swift; sourceTree = "<group>"; };
 		BD7239752979BCFC00AA52C7 /* MetalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalModel.swift; sourceTree = "<group>"; };
 		BD7239772979BD0A00AA52C7 /* MetalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalProvider.swift; sourceTree = "<group>"; };
 		BD72397C2979C32000AA52C7 /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +55,6 @@
 		BD90B5E429770D8600DC6DCC /* CollectionViewBankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBankCell.swift; sourceTree = "<group>"; };
 		BD90B5E529770D8600DC6DCC /* CollectionViewBankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewBankCell.xib; sourceTree = "<group>"; };
 		BDEA115B2979A39A00C61C8E /* IngotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngotViewController.swift; sourceTree = "<group>"; };
-		BDEA115E2979A57900C61C8E /* GemAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemAPI.swift; sourceTree = "<group>"; };
 		BDEA11602979A58600C61C8E /* GemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemModel.swift; sourceTree = "<group>"; };
 		BDEA11622979A59200C61C8E /* GemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemProvider.swift; sourceTree = "<group>"; };
 		BDEA11642979AC7900C61C8E /* GemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GemCell.swift; sourceTree = "<group>"; };
@@ -87,7 +83,6 @@
 		BD7239722979BCD100AA52C7 /* ModelMetal */ = {
 			isa = PBXGroup;
 			children = (
-				BD7239732979BCF200AA52C7 /* MetalAPI.swift */,
 				BD7239752979BCFC00AA52C7 /* MetalModel.swift */,
 				BD7239772979BD0A00AA52C7 /* MetalProvider.swift */,
 			);
@@ -190,7 +185,6 @@
 		BDEA115D2979A54B00C61C8E /* ModelGem */ = {
 			isa = PBXGroup;
 			children = (
-				BDEA115E2979A57900C61C8E /* GemAPI.swift */,
 				BDEA11602979A58600C61C8E /* GemModel.swift */,
 				BDEA11622979A59200C61C8E /* GemProvider.swift */,
 			);
@@ -347,11 +341,9 @@
 				BD90B5E1297702DC00DC6DCC /* BankModel.swift in Sources */,
 				BDEA115C2979A39A00C61C8E /* IngotViewController.swift in Sources */,
 				BD90B5E3297702EA00DC6DCC /* BankProvider.swift in Sources */,
-				BD7239742979BCF200AA52C7 /* MetalAPI.swift in Sources */,
 				BD7239762979BCFC00AA52C7 /* MetalModel.swift in Sources */,
 				BD90B5AB2977002A00DC6DCC /* AppDelegate.swift in Sources */,
 				BD90B5E629770D8600DC6DCC /* CollectionViewBankCell.swift in Sources */,
-				BDEA115F2979A57900C61C8E /* GemAPI.swift in Sources */,
 				BD72397F2979C33E00AA52C7 /* MetalCell.swift in Sources */,
 				BDEA11652979AC7900C61C8E /* GemCell.swift in Sources */,
 				BD7239782979BD0A00AA52C7 /* MetalProvider.swift in Sources */,

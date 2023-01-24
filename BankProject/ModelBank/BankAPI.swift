@@ -10,12 +10,21 @@ import Moya
 
 enum BelarusbankAPI {
     case getAllBank
+    case getAllBankGem
+    case getAllBankMetal
 }
 
 extension BelarusbankAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "https://belarusbank.by/api/atm?")!
-    }
+        switch self {
+            case .getAllBank:
+                return URL(string: "https://belarusbank.by/api/atm?")!
+            case .getAllBankGem:
+                return URL(string: "https://belarusbank.by/api/getgems")!
+            case .getAllBankMetal:
+                return URL(string: "https://belarusbank.by/api/getinfodrall")!
+        }
+}
     
     var path: String {
         return ""
@@ -27,7 +36,7 @@ extension BelarusbankAPI: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getAllBank:
+            case .getAllBank, .getAllBankGem, .getAllBankMetal:
             return .get
         }
     }
@@ -49,6 +58,10 @@ extension BelarusbankAPI: TargetType {
             case .getAllBank:
                 parameters["city"] = ""
                 parameters["ATM_currency"] = "BYN,USD,EUR"
+            case .getAllBankGem:
+                return nil
+            case .getAllBankMetal:
+                return nil
         }
         
         return parameters
@@ -56,7 +69,7 @@ extension BelarusbankAPI: TargetType {
     
     var enocding: ParameterEncoding {
         switch self {
-            case .getAllBank:
+            case .getAllBank, .getAllBankGem, .getAllBankMetal:
                 return URLEncoding.queryString
         }
     }

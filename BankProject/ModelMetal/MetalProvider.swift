@@ -10,7 +10,7 @@ import Moya
 import Moya_ObjectMapper
 
 final class MetalProvider {
-    private let provider = MoyaProvider<BelarusbankMetalAPI>(plugins: [NetworkLoggerPlugin()])
+    private let provider = MoyaProvider<BelarusbankAPI>(plugins: [NetworkLoggerPlugin()])
     
     func getMetal(success: (([MetalModel]) -> Void)?, failure: (() -> Void)?) {
         provider.request(.getAllBankMetal) { result in

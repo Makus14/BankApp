@@ -10,7 +10,7 @@ import Moya
 import Moya_ObjectMapper
 
 final class GemProvider {
-    private let provider = MoyaProvider<BelarusbankGemAPI>(plugins: [NetworkLoggerPlugin()])
+    private let provider = MoyaProvider<BelarusbankAPI>(plugins: [NetworkLoggerPlugin()])
     
     func getGem(success: (([GemModel]) -> Void)?, failure: (() -> Void)?) {
         provider.request(.getAllBankGem) { result in
