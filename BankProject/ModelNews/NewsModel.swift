@@ -10,17 +10,18 @@ import ObjectMapper
 
 class NewsModel: Mappable {
     var name_ru: String = ""
-    var html_ru: String = ""
-    var img: UIImage
+    var link: String = ""
+    var img: String = ""
     
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
     
     func mapping(map: Map) {
-        name_ru <- map["name_ru"]
-        html_ru <- map["html_ru"]
-        img <- map["img"]
+        name_ru     <- map["name_ru"]
+        link     <- map["link"]
+        img         <- map["img"]
     }
     
 }
+
