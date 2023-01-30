@@ -161,11 +161,12 @@
                         <segue destination="yv6-1N-rfO" kind="relationship" relationship="viewControllers" id="9LP-1g-6aY"/>
                         <segue destination="EJX-sf-5Yq" kind="relationship" relationship="viewControllers" id="GSb-cm-IOI"/>
                         <segue destination="FsF-sq-Ksg" kind="relationship" relationship="viewControllers" id="oz3-Ph-yTM"/>
+                        <segue destination="YJq-vR-uAi" kind="relationship" relationship="viewControllers" id="GtU-2m-ihJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uza-Y4-sbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-857" y="690"/>
+            <point key="canvasLocation" x="-1468" y="1504"/>
         </scene>
         <!--Карта-->
         <scene sceneID="YZW-Cn-r0n">
@@ -485,6 +486,44 @@
             </objects>
             <point key="canvasLocation" x="1353.4351145038167" y="1226.7605633802818"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="qoj-L9-Emc">
+            <objects>
+                <viewController id="5DA-l0-RAH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YL3-Ms-CKk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i6M-os-h5Q">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="109" id="COL-Bs-NlZ">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="109"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="COL-Bs-NlZ" id="3qD-0I-HX7">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9N0-zL-ovx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9N0-zL-ovx" firstAttribute="trailing" secondItem="i6M-os-h5Q" secondAttribute="trailing" id="511-lZ-KZP"/>
+                            <constraint firstItem="i6M-os-h5Q" firstAttribute="leading" secondItem="9N0-zL-ovx" secondAttribute="leading" id="ENM-OI-zHH"/>
+                            <constraint firstItem="9N0-zL-ovx" firstAttribute="bottom" secondItem="i6M-os-h5Q" secondAttribute="bottom" id="MYn-1K-z3K"/>
+                            <constraint firstItem="i6M-os-h5Q" firstAttribute="top" secondItem="9N0-zL-ovx" secondAttribute="top" id="c9c-ZO-Gsb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fYs-LG-eMU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5b-Ip-qTo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351.9083969465648" y="1959.8591549295775"/>
+        </scene>
         <!--Камни-->
         <scene sceneID="1PS-hT-4U4">
             <objects>
@@ -523,10 +562,30 @@
             </objects>
             <point key="canvasLocation" x="426.71755725190837" y="1226.7605633802818"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="H3e-2b-DF8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YJq-vR-uAi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="gear.circle.fill" catalog="system" selectedImage="gear.circle.fill" id="rma-Lv-DwI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XLD-Xb-rDz">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5DA-l0-RAH" kind="relationship" relationship="rootViewController" id="tBl-gM-HIs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="514-zb-UMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427" y="1960"/>
+        </scene>
     </scenes>
     <resources>
         <image name="archivebox.fill" catalog="system" width="128" height="107"/>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
+        <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
