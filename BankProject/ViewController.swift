@@ -26,9 +26,11 @@ final class ViewController: UIViewController {
         }
     }
     var cityBank: String?
+    var choice: String?
     
     private var allMarkers = [GMSMarker]()
     private var dollarMarkers = [GMSMarker]()
+    private var filialMarkers = [GMSMarker]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,32 @@ final class ViewController: UIViewController {
         
         googleMapsView.isMyLocationEnabled = true
         getBank()
+        getFilials()
+       
         registerCell()
+    }
+    
+    private func getFilials() {
+        FilialsProvider().getFilials { [weak self] allBank in
+            guard let self else { return }
+            for bank in allBank {
+                if !self.massNames.contains(bank.name) {
+                    self.massNames.append(bank.name)
+                }
+                if self.cityBank == nil {
+                    
+                } else {
+                    if bank.name == self.cityBank! {
+                        
+                        self.drawMarkers(filials: bank)
+                        
+                    }
+                }
+            }
+            
+        } failure: {
+            
+        }
     }
     
     private func getBank() {
@@ -51,9 +78,10 @@ final class ViewController: UIViewController {
                     self.massNames.append(bank.city)
                 }
                 if self.cityBank == nil {
-                    self.drawMarkers(bank: bank)
+                    
                 } else {
                     if bank.city == self.cityBank! {
+                        
                         self.drawMarkers(bank: bank)
                     }
                 }
@@ -79,6 +107,18 @@ final class ViewController: UIViewController {
         marker.map = googleMapsView
     }
     
+    private func drawMarkers(filials: FilialsModel) {
+        guard let filialsXcoordinate = Double(filials.GPS_X),
+              let filialsYcoordinate = Double(filials.GPS_Y) else { return }
+        
+        let position = CLLocationCoordinate2D(latitude: filialsXcoordinate, longitude: filialsYcoordinate)
+        let marker = GMSMarker(position: position)
+        marker.icon = GMSMarker.markerImage(with: .systemBlue)
+        filialMarkers.append(marker)
+        marker.map = googleMapsView
+        
+    }
+    
     private func registerCell() {
         let nib = UINib(nibName: CollectionViewBankCell.id, bundle: nil)
         collectionBOA.register(nib, forCellWithReuseIdentifier: CollectionViewBankCell.id)
@@ -96,22 +136,6 @@ final class ViewController: UIViewController {
         googleMapsView.selectedMarker = marker
     }
     
-    @IBAction func searchATMIncludesMoneyDidTapped(_ sender: UIButton) {
-        googleMapsView.clear()
-        dollarMarkers.forEach { marker in
-            marker.map = googleMapsView
-            googleMapsView.selectedMarker = marker
-        }
-    }
-    
-    @IBAction func searchATMWithNoMoney(_ sender: UIButton) {
-        googleMapsView.clear()
-        allMarkers.forEach { marker in
-            marker.map = googleMapsView
-            googleMapsView.selectedMarker = marker
-        }
-
-    }
 }
 
 extension GMSMarker {
@@ -134,8 +158,29 @@ extension ViewController : UICollectionViewDelegate {
         if collectionView == collectionCity {
             cityBank = massNames[indexPath.row]
             googleMapsView.clear()
-            getBank()
+//            getBank()
+//            getFilials()
+        } else if collectionView == collectionBOA {
+            choice = massBank[indexPath.row]
+            switch choice {
+                case "Банкоматы":
+                    googleMapsView.clear()
+                    getBank()
+                    break
+                case "Отделения":
+                    googleMapsView.clear()
+                    getFilials()
+                    break
+                case "Всё":
+                    googleMapsView.clear()
+                    getBank()
+                    getFilials()
+                    break
+                default:
+                    break
+                   
             }
+        }
         }
 }
 

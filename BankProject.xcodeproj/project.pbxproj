@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		42B82A7D636F9FF7C5AC485F /* Pods_BankProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D620EFAEC2F1D1F72D4B685 /* Pods_BankProject.framework */; };
+		BD513C6729882A7A00788FB6 /* FilialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD513C6629882A7A00788FB6 /* FilialsModel.swift */; };
+		BD513C6929882A8F00788FB6 /* FilialsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD513C6829882A8F00788FB6 /* FilialsProvider.swift */; };
 		BD7239762979BCFC00AA52C7 /* MetalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7239752979BCFC00AA52C7 /* MetalModel.swift */; };
 		BD7239782979BD0A00AA52C7 /* MetalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7239772979BD0A00AA52C7 /* MetalProvider.swift */; };
 		BD72397D2979C32000AA52C7 /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD72397C2979C32000AA52C7 /* MetalViewController.swift */; };
@@ -39,6 +41,8 @@
 		0E1182DEC400430B1C0EA510 /* Pods-BankProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankProject.release.xcconfig"; path = "Target Support Files/Pods-BankProject/Pods-BankProject.release.xcconfig"; sourceTree = "<group>"; };
 		2D620EFAEC2F1D1F72D4B685 /* Pods_BankProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A791EBE8884047DC42887ED1 /* Pods-BankProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankProject.debug.xcconfig"; path = "Target Support Files/Pods-BankProject/Pods-BankProject.debug.xcconfig"; sourceTree = "<group>"; };
+		BD513C6629882A7A00788FB6 /* FilialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilialsModel.swift; sourceTree = "<group>"; };
+		BD513C6829882A8F00788FB6 /* FilialsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilialsProvider.swift; sourceTree = "<group>"; };
 		BD7239752979BCFC00AA52C7 /* MetalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalModel.swift; sourceTree = "<group>"; };
 		BD7239772979BD0A00AA52C7 /* MetalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalProvider.swift; sourceTree = "<group>"; };
 		BD72397C2979C32000AA52C7 /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 				2D620EFAEC2F1D1F72D4B685 /* Pods_BankProject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD513C6529882A5700788FB6 /* ModelFilials */ = {
+			isa = PBXGroup;
+			children = (
+				BD513C6629882A7A00788FB6 /* FilialsModel.swift */,
+				BD513C6829882A8F00788FB6 /* FilialsProvider.swift */,
+			);
+			path = ModelFilials;
 			sourceTree = "<group>";
 		};
 		BD7239722979BCD100AA52C7 /* ModelMetal */ = {
@@ -164,6 +177,7 @@
 		BD90B5A92977002A00DC6DCC /* BankProject */ = {
 			isa = PBXGroup;
 			children = (
+				BD513C6529882A5700788FB6 /* ModelFilials */,
 				BDFF9FC429803C3100B3365A /* ModelNews */,
 				BD723980297D90C200AA52C7 /* ModelBank */,
 				BD7239722979BCD100AA52C7 /* ModelMetal */,
@@ -365,6 +379,7 @@
 			files = (
 				BDEA11632979A59200C61C8E /* GemProvider.swift in Sources */,
 				BDEA11612979A58600C61C8E /* GemModel.swift in Sources */,
+				BD513C6729882A7A00788FB6 /* FilialsModel.swift in Sources */,
 				BD90B5AF2977002A00DC6DCC /* ViewController.swift in Sources */,
 				BD90B5E1297702DC00DC6DCC /* BankModel.swift in Sources */,
 				BDEA115C2979A39A00C61C8E /* IngotViewController.swift in Sources */,
@@ -383,6 +398,7 @@
 				BDFF9FCE298040BC00B3365A /* NewsController.swift in Sources */,
 				BD72397D2979C32000AA52C7 /* MetalViewController.swift in Sources */,
 				BD8B72A7297717EE00910781 /* CollectionViewCityCell.swift in Sources */,
+				BD513C6929882A8F00788FB6 /* FilialsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

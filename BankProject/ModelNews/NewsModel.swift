@@ -19,7 +19,7 @@ class NewsModel: Mappable {
     
     func mapping(map: Map) {
         name_ru     <- map["name_ru"]
-        link     <- map["link"]
+        link        <- map["link"]
         img         <- map["img"]
     }
     
