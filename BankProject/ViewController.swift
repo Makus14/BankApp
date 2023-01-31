@@ -10,13 +10,8 @@ import GoogleMaps
 import CoreLocation
 
 final class ViewController: UIViewController {
-    
     @IBOutlet weak var googleMapsView: GMSMapView!
-    @IBOutlet weak var filterButtonHaveMoney: UIButton!
-    @IBOutlet weak var filterButtonHaveNotMoney: UIButton!
-    
     @IBOutlet weak var collectionBOA: UICollectionView!
-    
     @IBOutlet weak var collectionCity: UICollectionView!
     
     let massBank: [String] = ["Банкоматы", "Отделения", "Всё"]
@@ -34,16 +29,13 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionBOA.delegate = self
-        collectionBOA.dataSource = self
-        
-        collectionCity.delegate = self
-        collectionCity.dataSource = self
-        
-        googleMapsView.isMyLocationEnabled = true
         getBank()
         getFilials()
-       
+        collectionBOA.delegate = self
+        collectionBOA.dataSource = self
+        collectionCity.delegate = self
+        collectionCity.dataSource = self
+        googleMapsView.isMyLocationEnabled = true
         registerCell()
     }
     
@@ -180,7 +172,7 @@ extension ViewController : UICollectionViewDelegate {
                    
             }
         }
-        }
+    }
 }
 
 extension ViewController : UICollectionViewDataSource {
