@@ -43,6 +43,7 @@ final class ViewController: UIViewController {
         googleMapsView.isMyLocationEnabled = true
         getBank()
         getFilials()
+       
         registerCell()
     }
     
@@ -112,7 +113,7 @@ final class ViewController: UIViewController {
         
         let position = CLLocationCoordinate2D(latitude: filialsXcoordinate, longitude: filialsYcoordinate)
         let marker = GMSMarker(position: position)
-        
+        marker.icon = GMSMarker.markerImage(with: .systemBlue)
         filialMarkers.append(marker)
         marker.map = googleMapsView
         
@@ -157,10 +158,28 @@ extension ViewController : UICollectionViewDelegate {
         if collectionView == collectionCity {
             cityBank = massNames[indexPath.row]
             googleMapsView.clear()
-            getBank()
+//            getBank()
+//            getFilials()
         } else if collectionView == collectionBOA {
             choice = massBank[indexPath.row]
-            
+            switch choice {
+                case "Банкоматы":
+                    googleMapsView.clear()
+                    getBank()
+                    break
+                case "Отделения":
+                    googleMapsView.clear()
+                    getFilials()
+                    break
+                case "Всё":
+                    googleMapsView.clear()
+                    getBank()
+                    getFilials()
+                    break
+                default:
+                    break
+                   
+            }
         }
         }
 }
