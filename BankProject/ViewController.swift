@@ -158,10 +158,9 @@ extension ViewController : UICollectionViewDelegate {
         if collectionView == collectionCity {
             cityBank = massNames[indexPath.row]
             googleMapsView.clear()
-//            getBank()
-//            getFilials()
         } else if collectionView == collectionBOA {
             choice = massBank[indexPath.row]
+            googleMapsView.clear()
             switch choice {
                 case "Банкоматы":
                     googleMapsView.clear()
